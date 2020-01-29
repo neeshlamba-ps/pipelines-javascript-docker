@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: neeshlambapspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: neeshlambapspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: neeshlambapspipelinesjavascriptdocker 
+          image: itdevopsacr.azurecr.io/neeshlambapspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
